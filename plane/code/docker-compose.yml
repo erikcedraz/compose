@@ -81,7 +81,6 @@ services:
 
   admin:
     image: artifacts.plane.so/makeplane/plane-admin:${APP_RELEASE:-stable}
-    command: node admin/server.js admin
     deploy:
       replicas: ${ADMIN_REPLICAS:-1}
       restart_policy:
