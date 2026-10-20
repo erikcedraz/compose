@@ -60,7 +60,6 @@ x-app-env: &app-env
 services:
   web:
     image: artifacts.plane.so/makeplane/plane-frontend:${APP_RELEASE:-stable}
-    command: node web/server.js web
     deploy:
       replicas: ${WEB_REPLICAS:-1}
       restart_policy:
